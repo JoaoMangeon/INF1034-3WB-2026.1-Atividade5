@@ -14,6 +14,7 @@ mixer.music.load('partytonight.mp3')
 mixer.music.play(-1)
 
 
+
 window = display.set_mode((1280,720))
 
 
@@ -44,14 +45,18 @@ while True:
     draw.circle(window, (255, 255, 255), (990, 100), 55)
     draw.circle(window, (255, 255, 255), (1060, 100), 50)
 
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
-    draw.rect(window, (255, 247, 185), (350, 350, 235, 250))
+    draw.line(window, (255, 247, 185), (140, 45), (140, -10), 5)
+    draw.line(window, (255, 247, 185), (140, 155), (140, 210), 5)
+    draw.line(window, (255, 247, 185), (85, 100), (30, 100), 5)
+    draw.line(window, (255, 247, 185), (195, 100), (250, 100), 5)
+    draw.line(window, (255, 247, 185), (100, 60), (55, 15), 5)
+    draw.line(window, (255, 247, 185), (180, 140), (225, 185), 5)
+    draw.line(window, (255, 247, 185), (100, 140), (55, 185), 5)
+    draw.line(window, (255, 247, 185), (180, 60), (225, 15), 5)
+
+    draw.rect(window, (255, 255, 255), (480, 460, 80, 140))
+    draw.circle(window, (184, 191, 174), (490, 535), 5) 
+    draw.rect(window, (171, 186, 179), (375, 430, 80, 100)) 
     
 
     
