@@ -17,6 +17,9 @@ mixer.music.play(-1)
 
 window = display.set_mode((1280,720))
 
+nuvem_x = 0
+velocidade = 3
+relogio = time.Clock()
 
 window.fill((209, 245, 255))
 
@@ -27,6 +30,12 @@ while True:
         if ev.type == QUIT:
             quit()
             sys.exit
+    
+    nuvem_x += velocidade
+    if (850 + nuvem_x) > (1280 + 300):
+        nuvem_x = 0
+
+    window.fill((209, 245, 255))
     
     # Desenhar a partir daqui
 
@@ -40,10 +49,10 @@ while True:
     draw.rect(window, (170, 131, 140), (830, 450, 40, 150)) 
     draw.circle(window, (156, 204, 86), (850, 400), 100) 
     
-    draw.circle(window, (255, 255, 255), (850, 100), 50)
-    draw.circle(window, (255, 255, 255), (920, 100), 60)
-    draw.circle(window, (255, 255, 255), (990, 100), 55)
-    draw.circle(window, (255, 255, 255), (1060, 100), 50)
+    draw.circle(window, (255, 255, 255), (850 + nuvem_x, 100), 50)
+    draw.circle(window, (255, 255, 255), (920 + nuvem_x, 100), 60)
+    draw.circle(window, (255, 255, 255), (990 + nuvem_x, 100), 55)
+    draw.circle(window, (255, 255, 255), (1060 + nuvem_x, 100), 50)
 
     draw.line(window, (255, 247, 185), (140, 45), (140, -10), 5)
     draw.line(window, (255, 247, 185), (140, 155), (140, 210), 5)
@@ -68,3 +77,4 @@ while True:
     window.blit(rigbymordecai_text, (500, 0))
     
     display.update()
+    relogio.tick(60)
